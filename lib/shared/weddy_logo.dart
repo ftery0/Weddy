@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:weddy/shared/theme/app_spacing.dart';
-import 'package:weddy/shared/theme/app_typography.dart';
+import 'package:weddy/core/app_spacing.dart';
+import 'package:weddy/core/app_typography.dart';
 
 class WeddyLogo extends StatelessWidget {
   const WeddyLogo({super.key});

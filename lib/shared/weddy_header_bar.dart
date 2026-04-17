@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:weddy/shared/theme/color/app_theme.dart';
-import 'package:weddy/shared/theme/color/app_palette.dart';
-import 'package:weddy/shared/theme/app_icons.dart';
-import 'package:weddy/shared/theme/app_spacing.dart';
-import 'package:weddy/shared/components/weddy_logo.dart';
+import 'package:weddy/core/app_theme.dart';
+import 'package:weddy/core/app_palette.dart';
+import 'package:weddy/core/app_icons.dart';
+import 'package:weddy/core/app_spacing.dart';
+import 'package:weddy/shared/weddy_logo.dart';
 
 class WeddyHeaderBar extends StatelessWidget implements PreferredSizeWidget {
   const WeddyHeaderBar({super.key});
@@ -36,8 +36,6 @@ class WeddyHeaderBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-
-
 class _Actions extends StatelessWidget {
   final WeddyColors colors;
   const _Actions({required this.colors});
@@ -47,6 +45,10 @@ class _Actions extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
+        WeddyIcons.appBarNotification.toIcon(
+          size: 18,
+          color: colors.label.alternative,
+        ),
         const SizedBox(width: AppSpacing.md),
         Container(
           width: 32,
