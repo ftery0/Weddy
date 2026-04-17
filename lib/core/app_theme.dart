@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'app_palette.dart';
-import '../app_typography.dart';
+import 'package:weddy/core/app_palette.dart';
+import 'package:weddy/core/app_typography.dart';
 
 // ── Color group sub-tokens ───────────────────────────────────────────────────
 
