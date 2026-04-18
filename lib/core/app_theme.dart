@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:weddy/core/app_palette.dart';
 import 'package:weddy/core/app_typography.dart';
 
-// ── Color group sub-tokens ───────────────────────────────────────────────────
+// ── Color group sub-tokens
 
 @immutable
 class WeddyPrimary {
@@ -41,7 +41,7 @@ class WeddyStatus {
   final Color negative, cautionary, positive;
 }
 
-// ── Semantic color tokens ────────────────────────────────────────────────────
+// ── Semantic color tokens
 
 @immutable
 class WeddyColors extends ThemeExtension<WeddyColors> {
@@ -111,7 +111,7 @@ extension WeddyColorsX on BuildContext {
   WeddyColors get colors => Theme.of(this).extension<WeddyColors>()!;
 }
 
-// ── ThemeData builder ────────────────────────────────────────────────────────
+// ── ThemeData builder
 
 class AppTheme {
   const AppTheme._();

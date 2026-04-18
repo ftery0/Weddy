@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weddy/screens/home/home_screen.dart';
 import 'package:weddy/screens/map_screen.dart';
-import 'package:weddy/screens/settings_screen.dart';
 import 'package:weddy/screens/notifications_screen.dart';
 import 'package:weddy/shared/weddy_header_bar.dart';
 import 'package:weddy/shared/weddy_bottom_nav.dart';
@@ -53,9 +52,13 @@ class _RootShellState extends State<_RootShell> {
         currentIndex: _currentIndex,
         onTap: (i) => setState(() => _currentIndex = i),
       ),
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
+  
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 88),
+        child: IndexedStack(
+          index: _currentIndex,
+          children: _screens,
+        ),
       ),
     );
   }
