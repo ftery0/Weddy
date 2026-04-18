@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weddy/core/app_theme.dart';
 import 'package:weddy/core/app_palette.dart';
-import 'package:weddy/core/app_icons.dart';
 import 'package:weddy/core/app_spacing.dart';
+import 'package:weddy/core/app_typography.dart';
 import 'package:weddy/shared/weddy_logo.dart';
 
 class WeddyHeaderBar extends StatelessWidget implements PreferredSizeWidget {
@@ -21,7 +21,9 @@ class WeddyHeaderBar extends StatelessWidget implements PreferredSizeWidget {
         child: SizedBox(
           height: 64,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.pagePadding),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.pagePadding,
+            ),
             child: Row(
               children: [
                 const WeddyLogo(),
@@ -45,17 +47,26 @@ class _Actions extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        WeddyIcons.appBarNotification.toIcon(
-          size: 18,
-          color: colors.label.alternative,
-        ),
         const SizedBox(width: AppSpacing.md),
-        Container(
-          width: 32,
-          height: 32,
-          decoration: const BoxDecoration(
+        Icon(Icons.search_rounded, size: 18, color: colors.label.normal),
+        const SizedBox(width: AppSpacing.md),
+        DecoratedBox(
+          decoration: BoxDecoration(
             color: AppPalette.cream100,
             shape: BoxShape.circle,
+            border: Border.all(color: colors.line.alternative),
+          ),
+          child: SizedBox(
+            width: 32,
+            height: 32,
+            child: Center(
+              child: Text(
+                'H',
+                style: AppTypography.labelLarge.copyWith(
+                  color: colors.label.normal,
+                ),
+              ),
+            ),
           ),
         ),
       ],
